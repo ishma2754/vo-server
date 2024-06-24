@@ -1,0 +1,7 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.flex-grow {
+  flex-grow: 1;
+}
