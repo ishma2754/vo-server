@@ -18,7 +18,7 @@ export default function Auth() {
 
   const handleSubmit = async (e, endpoint) => {
     e.preventDefault();
-    if (!isLogIn && password != confirmPassword) {
+    if (!isLogIn && password !== confirmPassword) {
       setError("Make sure passwords match");
       return;
     }

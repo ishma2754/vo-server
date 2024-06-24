@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-RussianViolet mt-8">
       <div className="px-4 py-6 md:flex md:items-center md:justify-between">
         <span className="text-sm text-white sm:text-center">
-          © 2024 <a href="#">VitalOrgans</a> By ISHMA KHAN
+          © 2024 VitalOrgans By ISHMA KHAN
         </span>
         <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
           <a
