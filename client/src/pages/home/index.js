@@ -237,7 +237,7 @@ export default function Home() {
       </form>
 
       <div className="max-w-md mx-4 lg:mx-auto border-4 border-RussianViolet rounded-lg p-4 mt-8">
-        <h2 className="text-lg text-inputTextColor font-semibold mb-4">USER DETAILS</h2>
+        <h2 className="text-lg text-inputTextColor font-bold mb-4">USER DETAILS</h2>
         <div className="">
           {sortedFormData?.map((formDataItem) => (
             <div key={formDataItem.id} className="grid grid-cols-3 gap-4">

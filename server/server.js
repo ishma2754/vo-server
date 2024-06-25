@@ -356,6 +356,18 @@ app.post("/Input", async (req, res) => {
 //sign up
 app.post("/signup", async (req, res) => {
   const { email, password, license_key } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ detail: "Email and password are required" });
+  }
+  const existingUser = await pool.query(
+    "SELECT * FROM users WHERE email = $1",
+    [email]
+  );
+  if (existingUser.rows.length > 0) {
+    return res.status(400).json({ detail: "Email is already registered" });
+  }
+
   const salt = bcrypt.genSaltSync(10);
   const hashedPassword = bcrypt.hashSync(password, salt);
 
@@ -399,6 +411,10 @@ app.post("/signup", async (req, res) => {
 //login
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ detail: "Email and password are required" });
+  }
 
   try {
     const users = await pool.query("SELECT * FROM users WHERE email = $1", [

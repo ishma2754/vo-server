@@ -18,6 +18,12 @@ export default function Auth() {
 
   const handleSubmit = async (e, endpoint) => {
     e.preventDefault();
+
+    if (!email || !password) {
+      setError("Email and password are required");
+      return;
+    }
+
     if (!isLogIn && password !== confirmPassword) {
       setError("Make sure passwords match");
       return;
@@ -76,7 +82,7 @@ export default function Auth() {
               />
 
               <label htmlFor="licenseKey" className="label-license">
-                License Key * for Hospital/Clinic 
+                License Key * for Hospital/Clinic
               </label>
               <input
                 type="text"

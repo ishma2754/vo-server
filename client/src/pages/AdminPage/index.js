@@ -8,7 +8,6 @@ import { pdfjs } from "react-pdf";
 import { format, parseISO } from "date-fns";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.js`;
 
-
 export default function AdminFetchUser() {
   const [userEmail, setUserEmail] = useState("");
   const [userData, setUserData] = useState(null);
@@ -140,7 +139,7 @@ export default function AdminFetchUser() {
           {userData && (
             <div>
               <div className="max-w-md mx-auto border-4 border-RussianViolet rounded-lg p-4 mt-8">
-                <h2 className="text-lg text-inputTextColor font-semibold mb-4">
+                <h2 className="text-lg text-inputTextColor font-bold mb-4">
                   USER DETAILS
                 </h2>
                 <div>
