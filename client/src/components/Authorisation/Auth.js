@@ -73,6 +73,7 @@ export default function Auth() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
+
           {!isLogIn && (
             <>
               <input
@@ -99,6 +100,8 @@ export default function Auth() {
           />
 
           {error && <p className="error">{error}</p>}
+          <p><span>User</span>: Email: <span>user@test.com</span>   Pass: <span>123</span></p>
+          <p><span>Hospital</span>: Email: <span>hospital@test.com </span> Pass: <span>123</span></p>
         </form>
 
         <div className="auth-options">

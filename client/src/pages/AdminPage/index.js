@@ -122,7 +122,7 @@ export default function AdminFetchUser() {
           </h2>
           <input
             type="email"
-            placeholder="Enter user email"
+            placeholder="Enter user email e.g user@test.com"
             className="bg-gray-50 border-2 border-underlineHome text-inputTextColor text-sm rounded-lg focus:ring-RussianViolet focus:border-RussianViolet
             block w-full md:w-1/4 p-2.5 "
             value={userEmail}
@@ -209,7 +209,7 @@ export default function AdminFetchUser() {
                         <div className="font-semibold text-underlineHome">
                           DATE
                         </div>
-                        <div className="text-inputTextColor">
+                        <div className="text-inputTextColor font-bold">
                           {userData.inputValues[0].date}
                         </div>
                       </div>
