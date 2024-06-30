@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# VitalOrgans-Emergency Response App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+VitalOrgans aims to enhance emergency response by providing hospitals access to patient's medical history via patient's registered email. It works as a tool for patient to manage their medical reports, medical details and their personal information.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+To set up the project locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Install server dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm install
 
-### `npm test`
+### Install client dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigate to the client directory: 
 
-### `npm run build`
+cd client
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Set up environment variables:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### For the server: 
 
-### `npm run eject`
+##### Create a .env file in the server directory and add the necessary environment variables.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+USER_NAME=your-database-username
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+PASSWORD=your-database-password
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+HOST=your-database-host
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+DBPORT=your-database-port
 
-## Learn More
+AWS_BUCKET_NAME=your-aws-bucket-name
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+AWS_BUCKET_REGION=your-aws-bucket-region
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+AWS_ACCESS_KEY=your-aws-access-key
 
-### Code Splitting
+AWS_SECRET_ACCESS_KEY=your-aws-secret-access-key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### For the client:
 
-### Analyzing the Bundle Size
+##### Create a .env file in the client directory and add the necessary environment variables.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+REACT_APP_SERVERURL=http://localhost:8000
 
-### Making a Progressive Web App
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To run the project locally, use the following commands:
 
-### Advanced Configuration
+#### Start the server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm run server
 
-### Deployment
+#### Start the client
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+In a new terminal, navigate to the client directory and start the client:
 
-### `npm run build` fails to minify
+cd client
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm start
+
+This will start the server and client applications. The client will be accessible at http://localhost:3000.
+
+### Project Structure
+
+vitalorgans-app/
+
+├── client/
+
+│   ├── public/                # Static files like index.html
+
+│   ├── src/                   # React components and assets
+
+│   ├── .env                   # Client environment variables
+
+│   ├── package-lock.json      # Client package lock file
+
+│   ├── package.json           # Client-specific dependencies and scripts
+
+│   ├── postcss.config.js      # PostCSS configuration
+
+│   └── tailwind.config.js     # Tailwind CSS configuration
+
+├── server/
+
+│   ├── .env                      # Server environment variables
+
+│   ├── data.sql                  # PostgresSQL script for database setup
+
+│   ├── db.js                     # Database connection setup
+
+│   ├── package.json              # Server-specific dependencies and scripts
+
+│   └── server.js                 # Main server file
+
+├── .gitignore                    # Git ignore file
+
+├── README.md                     # Project README file
+
+└── package.json                  # Project-wide dependencies and scripts
+
+   
+
+
